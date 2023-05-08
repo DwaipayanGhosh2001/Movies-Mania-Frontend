@@ -31,6 +31,9 @@ body{
     background:linear-gradient(180deg, rgba(8, 0, 1, 0.84) 0%, rgba(229, 43, 43, 1) 100%);
 
 }
+.movieform{
+    width: 100% !important;
+}
 
 
 

@@ -37,12 +37,12 @@ const Movies = () => {
   }, []);
   return (
     <Container fluid>
-      <div className="">
-      <Form className="float-start mt-2">
+      <div className="d-flex justify-content-between mt-3">
+      <Form className="w-50 mt-2 movieform">
         <Input
           type="search"
           placeholder="Looking for?"
-          className="w-100 ms-5 border-0 rounded-pill"
+          className="w-50 ms-md-5 border-0 rounded-pill"
           value={value}
           onChange={(e) => setValue(e.target.value)}
         />
@@ -50,27 +50,29 @@ const Movies = () => {
         <Button
           tag={Link}
           to="/"
-          className="border-0 float-end "
+          className="border-0  "
           outline
           style={{ backgroundColor: (hover = "transparent") }}
         >
           <FaArrowCircleLeft className="fs-1 text-danger " />
         </Button>
+        </div>
+
         <h1
-          className="text-white text-center pt-5 text-uppercase mt-3 ms-5"
+          className="text-white text-center pt-4 text-uppercase mt-0 ms-5"
           style={{ letterSpacing: "10px" }}
         >
           {channelDetails}{" "}
         </h1>
-      </div>
+    
      
 
       <div>
         {!value ? (
           <Container fluid>
-            <Row className="ms-5">
+            <Row className="ms-md-5">
               {movies.map((item, index) => (
-                <Col lg={3} md={4} sm={7} xs={8} key={index} className="m-5 ">
+                <Col lg={3} md={4} sm={7} xs={10} key={index} className="m-5 ">
                   <Card className=" bg-background  d-flex flex-column h-100 shadow rounded">
                     <img
                       src={`http://127.0.0.1:8000/${item.image}`}
@@ -105,9 +107,9 @@ const Movies = () => {
               ) : (
                 <>
                  <Container fluid>
-            <Row className="ms-5">
+            <Row className="ms-md-5">
               {loadSearch.map((item, index) => (
-                <Col lg={3} md={4} sm={7} xs={8} key={index} className="m-5 ">
+                <Col lg={3} md={4} sm={7} xs={10} key={index} className="m-5 ">
                   <Card className=" bg-background  d-flex flex-column h-100 shadow rounded">
                     <img
                       src={`http://127.0.0.1:8000/${item.image}`}

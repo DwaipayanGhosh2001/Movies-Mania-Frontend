@@ -61,7 +61,7 @@ const HomePage = () => {
         <TypingEffect text="Movie Mania" />
       </h1>
       <motion.div
-        className="ms-5"
+        className="ms-md-5"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
@@ -70,14 +70,15 @@ const HomePage = () => {
           ease: [0, 0.71, 0.2, 1.01],
         }}
       >
+        <div className="d-md-flex justify-content-between">
         <h3
-          className=" text-white ms-5 text-uppercase mb-3"
+          className=" text-white ms-md-5 text-uppercase mb-3 mx-xs-auto"
           style={{ fontFamily: "monospace", letterSpacing: "5px" }}
         >
           {" "}
           Channels
-          <span className="float-end me-5">
-            <Form>
+        </h3>
+        <Form className="me-5">
               <Input
                 type="search"
                 placeholder="Looking for ?"
@@ -86,13 +87,13 @@ const HomePage = () => {
                 onChange={(e) => setSearchValue(e.target.value)}
               />
             </Form>
-          </span>
-        </h3>
+        </div>
+       
         {!searchvalue ? (
           <Container fluid>
-            <Row className="ms-5">
+            <Row className="ms-md-5">
               {channel.map((item, index) => (
-                <Col lg={3} md={4} sm={7} xs={8} key={index} className="m-5 ">
+                <Col lg={3} md={4} sm={7} xs={9} key={index} className="m-5 ">
                   <Card className=" bg-background  d-flex flex-column h-100 shadow rounded">
                     <img
                       src={item.image}
@@ -130,7 +131,7 @@ const HomePage = () => {
         ) : (
           <>
             <Container fluid>
-              <Row className="ms-5">
+              <Row className="ms-md-5">
                 {searchLoad.length === 0 ? (
                   <h2 className="text-white text-center mt-5 text-uppercase">
                     {" "}
