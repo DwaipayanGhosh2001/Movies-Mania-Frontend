@@ -8,8 +8,8 @@ const TypingEffect = ({ text }) => {
   useEffect(() => {
     const typeText = async () => {
       for (let i = 0; i < text.length; i++) {
-        await controls.start({ opacity: 1, transition: { duration: 0.1 } });
-        await controls.start({ opacity: 0, transition: { duration: 0.1 } });
+        await controls.start({ opacity: 1, transition: { duration: 0.05 } });
+        await controls.start({ opacity: 0, transition: { duration: 0.05 } });
         setTypedText((prevText) => prevText + text[i]);
       }
     };

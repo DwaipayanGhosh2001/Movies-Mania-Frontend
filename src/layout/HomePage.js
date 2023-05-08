@@ -49,7 +49,7 @@ const HomePage = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{
           duration: 1.5,
-          delay: 3,
+          delay: 1.5,
           ease: [0, 0.71, 0.2, 1.01],
         }}
         >
